@@ -6,11 +6,13 @@ import { useState, Fragment } from 'react';
 import { manufacturers } from '@/constants';
 
 
+
+
+
+
 const SearchManufacturer = ({ manufacturer, setManufacturer }: SearchManufacturerProps) => {
 
-
   const [query, setQuery] = useState('');
-
 
   return (
     <div className="search-manufacturer">
