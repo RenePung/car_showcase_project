@@ -12,7 +12,7 @@ export async function fetchCars() {
     }
 
 
-/*
+/*  The Following Goes for Above :
 1.Function Declaration: This code defines an asynchronous function named fetchCars.
 The async keyword indicates that this function will return a promise.
 
@@ -34,3 +34,19 @@ This is because API responses are usually in JSON format.
 
 This function is used to fetch car data from the specified API and returns the data in a format that can be easily used in your application. 
 */
+
+
+export const calculateCarRent = (city_mpg: number, year: number) => {
+    const basePricePerDay = 50; // Base rental price per day in dollars
+    const mileageFactor = 0.1; // Additional rate per mile driven
+    const ageFactor = 0.05; // Additional rate per year of vehicle age
+  
+    // Calculate additional rate based on mileage and age
+    const mileageRate = city_mpg * mileageFactor;
+    const ageRate = (new Date().getFullYear() - year) * ageFactor;
+  
+    // Calculate total rental rate per day
+    const rentalRatePerDay = basePricePerDay + mileageRate + ageRate;
+  
+    return rentalRatePerDay.toFixed(0);
+  };
