@@ -18,6 +18,11 @@ const SearchManufacturer = ({ manufacturer, setManufacturer }: SearchManufacture
                 alt="Car-logo"
                 />
               </Combobox.Button>
+
+
+              <Combobox.Input 
+              className="search-manufacturer__input"
+              />
             </div>
         </Combobox>
     </div>
