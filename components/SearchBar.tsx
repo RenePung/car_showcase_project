@@ -20,6 +20,8 @@ const SearchButton = ({ otherClasses }: { otherClasses: string}) => (
 const SearchBar = () => {
     const [manufacturer, setManufacturer] = useState('');
 
+    const [model, setModel] = useState('');
+
 
     const handleSearch = () => {}
 
@@ -44,6 +46,14 @@ const SearchBar = () => {
           height={25}
           className="absolute w-[20px] h-[20px] ml-4"
           alt="car model"
+          />
+          <input 
+          type="text"
+          name="model"
+          value={model}
+          onChange={(e) => setModel(e.target.value)}
+          placeholder="Golf R 333 Limited Edition"
+          className="searchbar__input"
           />
         </div>
     </form>
