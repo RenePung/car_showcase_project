@@ -70,6 +70,20 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
               <div className="relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg">
               <Image src="/hero.png" alt="car model" fill priority className="object-contain" />
               </div>
+
+              <div className="flex gap-3">
+                <div className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
+                <Image src="/hero.png" alt="car model" fill priority className="object-contain" />
+                </div>
+
+                <div className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
+                <Image src="/hero.png" alt="car model" fill priority className="object-contain" />
+                </div>
+                
+                <div className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
+                <Image src="/hero.png" alt="car model" fill priority className="object-contain" />
+                </div>
+              </div>
             </div>
           </Dialog.Panel>
         </Transition.Child>
