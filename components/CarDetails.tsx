@@ -1,3 +1,5 @@
+"use client";
+
 import { CarProps } from '@/types';
 
 import { Fragment } from 'react';
@@ -27,7 +29,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
     <Transition appear show={isOpen} as={Fragment}>
       <Dialog as="div" className="relative z-10" onClose={closeModal}>
         <Transition.Child>
-
+          <div className="fixed inset-0 bg-black bg-opacity-25" />
         </Transition.Child>
       </Dialog>
     </Transition>
