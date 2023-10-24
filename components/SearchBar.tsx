@@ -55,7 +55,9 @@ const SearchBar = () => {
           placeholder="Golf R 333 Limited Edition"
           className="searchbar__input"
           />
+          <SearchButton otherClasses="sm:hidden" />
         </div>
+        <SearchButton otherClasses="max-sm:hidden" />
     </form>
   )
 }
