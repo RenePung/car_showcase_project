@@ -79,10 +79,25 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                 <div className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
                 <Image src="/hero.png" alt="car model" fill priority className="object-contain" />
                 </div>
-                
+
                 <div className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
                 <Image src="/hero.png" alt="car model" fill priority className="object-contain" />
                 </div>
+              </div>
+            </div>
+
+            <div className="flex-1 flex flex-col gap-2">
+              <h2 className="font-semibold text-xl capitalize">
+                {car.make} {car.model}
+              </h2>
+
+              <div className="mt-3 flex flex-wrap gap-4">
+                {Object.entries(car).map(([key, value]) => (
+                  <div className="flex justify-between gap-5 w-full text-right" key={key}>
+                    <h4>{key}</h4>
+                    <p>{value}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </Dialog.Panel>
