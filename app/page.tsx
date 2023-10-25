@@ -1,4 +1,4 @@
-import { CarCard, CustomFilter, Hero, SearchBar } from '@/components';
+import { CarCard, CustomFilter, Hero, SearchBar, ShowMore } from '@/components';
 
 import { fuels, yearsOfProduction } from '@/constants';
 
@@ -53,6 +53,11 @@ export default async function Home({ searchParams }) {
               ))}
 
             </div>
+
+
+
+            <ShowMore />
+            
           </section>
         ): (
           <div className="home__error-container">
