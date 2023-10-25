@@ -46,6 +46,20 @@ const CustomFilter = ({ title, options }: CustomFilterProps) => {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
           >
+
+            <Listbox.Options className="custom-filter__options">
+              {options.map((option) => (
+                <Listbox.Option>
+
+                  {({ selected }) => (
+                    <span>
+                      {option.title}
+                    </span>
+                  )}
+
+                </Listbox.Option>
+              ))}
+            </Listbox.Options>
           </Transition>
         </div>
 
