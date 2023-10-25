@@ -21,11 +21,14 @@ const CustomFilter = ({ title, options }: CustomFilterProps) => {
 
   return (
     <div className="w-fit">
+
+
       <Listbox
       value={selected}
       onChange={(e) => setSelected(e)}
       >
         <div className="relative w-fit z-10">
+
           <Listbox.Button className="custom-filter__btn">
             <span className="block truncate">{selected.title}</span>
             <Image 
@@ -36,7 +39,17 @@ const CustomFilter = ({ title, options }: CustomFilterProps) => {
             alt="chevron up down"
             />
           </Listbox.Button>
+
+          <Transition
+          as={Fragment}
+          leave="transition ease-in duration-100"
+          leaveFrom="opacity-100"
+          leaveTo="opacity-0"
+          >
+          </Transition>
         </div>
+
+
       </Listbox>
     </div>
   )
