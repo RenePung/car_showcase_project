@@ -27,7 +27,7 @@ const CustomFilter = ({ title, options }: CustomFilterProps) => {
 
     const newPathName = updateSearchParams(title, e.value.toLowerCase());
 
-    router.push(newPathName);
+    router.push(newPathName, {scroll:false});
   }
 
   return (
